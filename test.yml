@@ -1,0 +1,16 @@
+---
+- hosts: test
+
+  tasks:
+
+    - name: Test date filter - year
+      debug:
+        msg: "{{ '2017-01-02' | year('%Y-%m-%d') }}"
+
+    - name: Test date filter - month
+      debug:
+        msg: "{{ '2017-01-02' | month('%Y-%m-%d') }}"
+
+    - name: Test date filter - day
+      debug:
+        msg: "{{ '2017-01-02' | day('%Y-%m-%d') }}"
